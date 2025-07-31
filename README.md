@@ -16,7 +16,7 @@ I am a software developer<br>Sharing tools on github<br>Developing new skills in
 ![](https://github-contributor-stats.vercel.app/api?username=77AXEL&limit=5&theme=dark&combine_all_yearly_contributions=true)
 ---
 ### 🔗 Links
-- Join Uss on: [Dev.to](https://dev.to/7axel)
+- Find me on: [Dev.to](https://dev.to/7axel)
 ---
 [![](https://visitcount.itsvg.in/api?id=77AXEL&label=Profile%20Views&icon=0&pretty=true)](https://visitcount.itsvg.in)
 
