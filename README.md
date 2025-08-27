@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="aboutme.gif" alt="About me">
+  <img src="https://github.com/77AXEL/77AXEL/blob/main/aboutme.gif" alt="About me">
 </p>
 
 ## 📜 A short description 
@@ -18,5 +18,6 @@ The programming languages I use most often:
 - [Dev.to](https://dev.to/7axel)
 ---
 [![](https://visitcount.itsvg.in/api?id=77AXEL&label=Profile%20Views&icon=0&pretty=true)](https://visitcount.itsvg.in)
+
 
 
