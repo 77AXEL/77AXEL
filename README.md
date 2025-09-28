@@ -4,7 +4,7 @@
 
 ## 📜 A short description 
 
-I am a university student and software developer with experience in low-level programming (C, C++, Assembly), full-stack development, and cross-platform application building. I study deep learning and computer vision, while also exploring operating systems, networking, cybersecurity, and the Internet of Things (IoT). I enjoy experimenting with 3D graphics, game engines, and OpenGL, and I use GitHub to share my projects, skills, and knowledge.
+I am a university student and software developer/engineer with experience in low-level programming (C, C++, Assembly), full-stack development, and cross-platform application building. I study deep learning and computer vision, while also exploring operating systems, networking, cybersecurity, and the Internet of Things (IoT). I enjoy experimenting with 3D graphics, game engines, and OpenGL, and I use GitHub to share my projects, skills, and knowledge.
 
 The programming languages I use most often: 
 
@@ -19,6 +19,7 @@ The programming languages I use most often:
 - [HuggingFace](https://huggingface.co/spaces/777axel)
 ---
 [![](https://visitcount.itsvg.in/api?id=77AXEL&label=Profile%20Views&icon=0&pretty=true)](https://visitcount.itsvg.in)
+
 
 
 
