@@ -12,7 +12,7 @@ The programming languages I use most often:
 
 ### 📊 Statistics
 ![](https://github-contributor-stats.vercel.app/api?username=77AXEL&limit=5&theme=transparent&hide_border=true&combine_all_yearly_contributions=true)
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=77AXEL&theme=transparent&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=77AXEL&theme=transparent&hide_border=true&langs_count=10&hide=smali&include_all_commits=true&count_private=true&layout=compact)
 
 ### 🔗 Find me on
 - [Dev.to](https://dev.to/7axel)
@@ -25,6 +25,7 @@ The programming languages I use most often:
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/77AXEL/77AXEL/output/pacman-contribution-graph.svg">
   <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/77AXEL/77AXEL/output/pacman-contribution-graph.svg">
 </picture>
+
 
 
 
