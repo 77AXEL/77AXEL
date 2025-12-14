@@ -14,6 +14,22 @@ The programming languages I use most often:
 ![](https://github-contributor-stats.vercel.app/api?username=77AXEL&limit=5&theme=transparent&hide_border=true&combine_all_yearly_contributions=true)
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=77AXEL&theme=transparent&hide_border=true&langs_count=10&hide=smali&include_all_commits=true&count_private=true&layout=compact)
 
+🎓 Certificates & Achievements
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/77AXEL/77AXEL/blob/main/ML_Cert.jpg" width="280"/><br>
+      <b>Machine Learning Certificate</b>
+    </td>
+    <td align="center">
+      <img src="https://github.com/77AXEL/77AXEL/blob/main/IntroToGenAIStudio.jpg" width="280"/><br>
+      <b>Intro to GenAI Studio</b>
+    </td>
+  </tr>
+</table>
+
+
+
 ### 🔗 Find me on
 - [Dev.to](https://dev.to/7axel)
 - [HuggingFace](https://huggingface.co/spaces/777axel)
@@ -25,6 +41,7 @@ The programming languages I use most often:
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/77AXEL/77AXEL/output/pacman-contribution-graph.svg">
   <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/77AXEL/77AXEL/output/pacman-contribution-graph.svg">
 </picture>
+
 
 
 
