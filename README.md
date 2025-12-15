@@ -25,6 +25,10 @@ The programming languages I use most often:
       <img src="https://github.com/77AXEL/77AXEL/blob/main/IntroToGenAIStudio.jpg" width="280"/><br>
       <b>Intro to GenAI Studio</b>
     </td>
+    <td align="center">
+      <img src="https://github.com/77AXEL/77AXEL/blob/main/AdvCppCert.jpg" width="280"/><br>
+      <b>Advanced C++ Certificate</b>
+    </td>
   </tr>
 </table>
 
@@ -41,6 +45,7 @@ The programming languages I use most often:
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/77AXEL/77AXEL/output/pacman-contribution-graph.svg">
   <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/77AXEL/77AXEL/output/pacman-contribution-graph.svg">
 </picture>
+
 
 
 
