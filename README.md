@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/77AXEL/77AXEL/blob/main/aboutme.gif" alt="About me">
+  <img src="./assets/aboutme.gif" alt="About me">
 </p>
 
 ## 📜 A short description 
@@ -18,15 +18,15 @@ The programming languages I use most often:
 <table align="center">
   <tr>
     <td align="center">
-      <img src="https://github.com/77AXEL/77AXEL/blob/main/ML_Cert.jpg" width="280"/><br>
+      <img src="./assets/cert1.jpg" width="280"/><br>
       <b>Machine Learning Certificate</b>
     </td>
     <td align="center">
-      <img src="https://github.com/77AXEL/77AXEL/blob/main/IntroToGenAIStudio.jpg" width="280"/><br>
+      <img src="./assets/cert2.jpg" width="280"/><br>
       <b>Intro to GenAI Studio</b>
     </td>
     <td align="center">
-      <img src="https://github.com/77AXEL/77AXEL/blob/main/AdvCppCert.jpg" width="280"/><br>
+      <img src="./assets/cert3.jpg" width="280"/><br>
       <b>Advanced C++ Certificate</b>
     </td>
   </tr>
@@ -35,7 +35,7 @@ The programming languages I use most often:
 
 
 ### 🔗 Find me on
-- [Dev.to](https://dev.to/7axel)
+- [Portfolio](https://77axel.github.io/77AXEL)
 - [HuggingFace](https://huggingface.co/spaces/777axel)
 ---
 [![](https://visitcount.itsvg.in/api?id=77AXEL&label=Profile%20Views&icon=0&pretty=true)](https://visitcount.itsvg.in)

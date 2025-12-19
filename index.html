@@ -1,31 +1,962 @@
 <!DOCTYPE html>
-<html lang='en'>
+
+<html class="dark" lang="en">
+
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <link rel='stylesheet' href='index.css'>
-  <link rel='icon' href='images/icon.png'>
-  <script src='index.js'></script>
-  <title>A.X.E.L</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Gharbi Mohamed</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Fira+Code:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#46ec13",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#142210",
+                        "card-dark": "#1a2c15",
+                        "border-dark": "#2c3928"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "mono": ["Fira Code", "monospace"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #142210;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #2c3928;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #46ec13;
+        }
+
+        .glass-nav {
+            background: rgba(20, 34, 16, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        * {
+            cursor: default;
+        }
+    </style>
 </head>
-<body id='bg' class='bg'>
-  <center>
-    <div id='loader' class='loader'></div>
-    <div id='content' class='content'>
-      <h1 class='logo'>A.X.E.L</h1>
-      <p>Welcome to this website</p><br>
-      <p class='click' onclick='open_window()'>|Mohamed Gharbi|</p>
-      <canvas id='c'></canvas>
-      <div id='window'>
-        <div class='main'>
-          <img class='close' src='images/close.png' onclick='close_window()'>
-          <input type='password' placeholder='password' id='password'><br><br>
-          <input type='button' value='open' id='button' onclick='main()'>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden selection:bg-primary selection:text-black">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <header class="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 py-4">
+            <nav
+                class="glass-nav border border-border-dark rounded-full px-6 py-3 flex items-center justify-between w-full max-w-[960px] shadow-lg shadow-black/20">
+                <div class="flex items-center gap-3">
+                    <div class="size-8 rounded-full bg-primary flex items-center justify-center text-background-dark">
+                        <span class="material-symbols-outlined text-[20px] font-bold">terminal</span>
+                    </div>
+                    <span class="text-white text-lg font-bold tracking-tight">Portfolio</span>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer"
+                        href="#projects">Projects</a>
+                    <a class="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer"
+                        href="#experience">Experience</a>
+                    <a class="text-gray-300 hover:text-primary text-sm font-medium transition-colors cursor-pointer"
+                        href="#skills">Skills</a>
+                </div>
+                <a class="hidden md:flex bg-primary hover:bg-primary/90 transition-colors text-background-dark text-sm font-bold px-5 py-2 rounded-full items-center gap-2 cursor-pointer"
+                    href="#contact">
+                    <span class="cursor-pointer">Contact Me</span>
+                    <span class="material-symbols-outlined text-[18px] cursor-pointer">arrow_outward</span>
+                </a>
+                <button class="md:hidden text-white">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </nav>
+        </header>
+        <main class="flex-grow flex flex-col items-center pt-24 pb-10 px-4 sm:px-8">
+            <div class="w-full max-w-[960px] flex flex-col gap-24">
+                <section class="min-h-[80vh] flex flex-col-reverse lg:flex-row items-center gap-12 py-10">
+                    <div class="flex-1 flex flex-col gap-6 items-start">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border-dark bg-card-dark/50">
+                            <span class="relative flex h-2 w-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                            </span>
+                            <span class="text-xs font-medium text-primary uppercase tracking-wider">Available for
+                                work</span>
+                        </div>
+
+                        <h1
+                            class="relative text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight">
+                            <span class="block opacity-0 translate-y-2 animate-hero-line">Hi, I'm</span>
+
+                            <span class="relative inline-block">
+                                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500
+                 animate-name-shimmer bg-[length:200%_100%]">
+                                    <span id="hero-name-typer" class="whitespace-pre-line"></span>
+                                    <span
+                                        class="inline-block align-baseline w-[0.6ch] bg-primary/80 ml-1 animate-caret-blink"></span>
+                                </span>
+
+                                <span
+                                    class="absolute left-0 right-0 -bottom-2 h-[3px] overflow-hidden pointer-events-none">
+                                    <span
+                                        class="block h-full w-0 bg-gradient-to-r from-primary via-primary to-primary animate-underline rounded-none"></span>
+                                </span>
+                            </span>
+                        </h1>
+
+                        <style>
+                            @keyframes heroLine {
+                                from {
+                                    opacity: 0;
+                                    transform: translateY(8px) scale(0.99);
+                                }
+
+                                to {
+                                    opacity: 1;
+                                    transform: translateY(0) scale(1);
+                                }
+                            }
+
+                            .animate-hero-line {
+                                animation: heroLine 600ms cubic-bezier(.2, .7, .2, 1) 60ms both;
+                            }
+
+                            @keyframes nameShimmer {
+                                0% {
+                                    background-position: 0% 50%;
+                                    filter: drop-shadow(0 0 0 rgba(70, 236, 19, 0));
+                                }
+
+                                50% {
+                                    filter: drop-shadow(0 0 12px rgba(70, 236, 19, 0.15));
+                                }
+
+                                100% {
+                                    background-position: 200% 50%;
+                                    filter: drop-shadow(0 0 0 rgba(70, 236, 19, 0));
+                                }
+                            }
+
+                            .animate-name-shimmer {
+                                animation: nameShimmer 4s ease-in-out infinite;
+                            }
+
+                            @keyframes caretBlink {
+
+                                0%,
+                                49% {
+                                    opacity: 1;
+                                }
+
+                                50%,
+                                100% {
+                                    opacity: 0;
+                                }
+                            }
+
+                            .animate-caret-blink {
+                                animation: caretBlink 900ms steps(1, start) infinite;
+                            }
+
+                            @keyframes underlineDraw {
+                                0% {
+                                    width: 0%;
+                                    transform: translateX(0);
+                                    opacity: 0;
+                                }
+
+                                12% {
+                                    opacity: 1;
+                                }
+
+                                60% {
+                                    width: 100%;
+                                    transform: translateX(0);
+                                }
+
+                                100% {
+                                    width: 100%;
+                                    transform: translateX(0);
+                                }
+                            }
+
+                            .animate-underline {
+                                animation: underlineDraw 1200ms cubic-bezier(.2, .7, .2, 1) 350ms both;
+                            }
+
+                            @media (prefers-reduced-motion: reduce) {
+
+                                .animate-hero-line,
+                                .animate-name-shimmer,
+                                .animate-caret-blink,
+                                .animate-underline {
+                                    animation: none !important;
+                                }
+                            }
+                        </style>
+
+                        <script>
+                                (function () {
+                                    const el = document.getElementById('hero-name-typer');
+                                    const text = 'Gharbi\nMohamed';
+                                    const typeMs = 65;
+                                    const pauseMs = 20000;
+                                    const eraseMs = 40;
+                                    const loop = true;
+
+                                    let i = 0;
+                                    let erasing = false;
+
+                                    function tick() {
+                                        if (!el) return;
+                                        if (!erasing) {
+                                            if (i <= text.length) {
+                                                el.textContent = text.slice(0, i);
+                                                i++;
+                                                setTimeout(tick, typeMs);
+                                            } else {
+                                                setTimeout(() => { erasing = true; tick(); }, pauseMs);
+                                            }
+                                        } else {
+                                            if (i >= 0) {
+                                                el.textContent = text.slice(0, i);
+                                                i--;
+                                                setTimeout(tick, eraseMs);
+                                            } else {
+                                                if (loop) {
+                                                    erasing = false;
+                                                    setTimeout(tick, 300);
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    if (document.readyState === 'loading') {
+                                        document.addEventListener('DOMContentLoaded', tick);
+                                    } else {
+                                        tick();
+                                    }
+                                })();
+                        </script>
+
+                        <p class="text-gray-400 text-lg max-w-lg leading-relaxed">I don't just write code to follow
+                            instructions—I write code that learns how to solve them. I build with purpose and precision
+                        </p>
+                        <div class="flex flex-wrap gap-4 mt-2">
+                            <a href="#projects"><button
+                                    class="bg-primary text-background-dark font-bold text-base px-8 py-3 rounded-full hover:shadow-[0_0_20px_rgba(70,236,19,0.4)] transition-all flex items-center gap-2">
+                                    View My Work<span class="material-symbols-outlined">arrow_downward</span>
+                                </button></a>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 w-full max-w-lg">
+                        <div id="terminal-card"
+                            class="w-full rounded bg-[#0f190c] border border-border-dark shadow-2xl overflow-hidden group hover:border-primary/30 transition-colors duration-300">
+                            <div class="flex items-center gap-2 px-4 py-3 bg-[#1a2617] border-b border-border-dark">
+                                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                <div class="ml-auto text-xs text-gray-500 font-mono">zsh — root</div>
+                            </div>
+
+                            <div class="relative p-6 font-mono text-sm leading-7 min-h-[260px]">
+                                <div id="terminal-seed" class="space-y-3 transition-all duration-500 ease-in-out">
+                                    <div class="flex">
+                                        <span class="text-primary mr-2">➜</span>
+                                        <span class="text-blue-400 mr-2">~</span>
+                                        <span class="text-gray-300">whoami</span>
+                                    </div>
+
+                                    <div class="text-gray-400 mb-4">
+                                        {<br />
+                                        <span class="text-purple-400">"name"</span>: <span
+                                            class="text-green-300">"Gharbi Mohamed"</span>,<br />
+                                        <span class="text-purple-400">"role"</span>: <span
+                                            class="text-green-300">"Software Engineer"</span>,<br />
+                                        <span class="text-purple-400">"focus"</span>: <span
+                                            class="text-green-300">"Low-level systems, Full-Stack, ML"</span>,<br />
+                                        <span class="text-purple-400">"status"</span>: <span
+                                            class="text-yellow-300">"Building cool stuff..."</span><br />
+                                        }
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <span class="text-primary mr-2">➜</span>
+                                        <span class="text-blue-400 mr-2">~</span>
+                                        <span class="animate-pulse bg-gray-500 w-2.5 h-5 block"></span>
+                                    </div>
+                                </div>
+
+
+
+                                <canvas id="cmatrix-canvas"
+                                    class="absolute inset-0 z-20 w-full h-full opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out"
+                                    aria-hidden="true"></canvas>
+
+                                <script>
+                                    (function () {
+                                        const primary = '#46ec13';
+                                        const fadeMs = 500;
+                                        const showMs = 3000;
+                                        const everyMs = 10000;
+
+                                        const seed = document.getElementById('terminal-seed');
+                                        const canvas = document.getElementById('cmatrix-canvas');
+                                        const ctx = canvas.getContext('2d');
+
+                                        let running = false;
+                                        let rafId = null;
+                                        let drops = [];
+                                        let fontSize = 14;
+                                        let columns = 0;
+
+                                        function resizeCanvas() {
+                                            const dpr = Math.max(1, window.devicePixelRatio || 1);
+                                            const rect = canvas.getBoundingClientRect();
+
+                                            const cssW = Math.max(1, Math.floor(rect.width));
+                                            const cssH = Math.max(1, Math.floor(rect.height));
+
+                                            canvas.width = Math.floor(cssW * dpr);
+                                            canvas.height = Math.floor(cssH * dpr);
+
+                                            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                                            ctx.font = `${fontSize}px "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace`;
+                                            ctx.textBaseline = 'top';
+
+                                            columns = Math.max(1, Math.floor(cssW / fontSize));
+                                            drops = new Array(columns).fill(0).map(() => Math.floor(Math.random() * -40));
+                                        }
+
+                                        const chars = 'アカサタナハマヤラワ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+                                        function drawMatrix() {
+                                            if (!running) return;
+
+                                            const rect = canvas.getBoundingClientRect();
+                                            const cssW = Math.floor(rect.width);
+                                            const cssH = Math.floor(rect.height);
+
+                                            ctx.fillStyle = 'rgba(20,34,16,0.07)';
+                                            ctx.fillRect(0, 0, cssW, cssH);
+
+                                            ctx.fillStyle = primary;
+
+                                            for (let i = 0; i < drops.length; i++) {
+                                                const text = chars[Math.floor(Math.random() * chars.length)];
+                                                const x = i * fontSize;
+                                                const y = drops[i] * fontSize;
+
+                                                if (Math.random() < 0.08) {
+                                                    ctx.fillStyle = '#8aff4a';
+                                                    ctx.fillText(text, x, y);
+                                                    ctx.fillStyle = primary;
+                                                } else {
+                                                    ctx.fillText(text, x, y);
+                                                }
+
+                                                if (y > cssH && Math.random() > 0.975) {
+                                                    drops[i] = Math.floor(Math.random() * -20);
+                                                } else {
+                                                    drops[i]++;
+                                                }
+                                            }
+
+                                            rafId = requestAnimationFrame(drawMatrix);
+                                        }
+
+                                        function stopMatrix() {
+                                            running = false;
+                                            canvas.style.opacity = '0';
+                                            if (rafId) cancelAnimationFrame(rafId);
+
+                                            const rect = canvas.getBoundingClientRect();
+                                            const cssW = Math.floor(rect.width);
+                                            const cssH = Math.floor(rect.height);
+                                            ctx.clearRect(0, 0, cssW, cssH);
+                                        }
+
+                                        function startMatrix() {
+                                            if (running) return;
+                                            running = true;
+                                            canvas.style.opacity = '1';
+                                            drawMatrix();
+                                        }
+
+                                        function disappearSeed() {
+                                            seed.style.opacity = '0';
+                                            seed.style.filter = 'blur(3px)';
+                                            seed.style.transform = 'translateY(-6px)';
+                                        }
+
+                                        function appearSeed() {
+                                            seed.style.opacity = '1';
+                                            seed.style.filter = 'none';
+                                            seed.style.transform = 'translateY(0)';
+                                        }
+
+                                        function cycle() {
+                                            disappearSeed();
+                                            setTimeout(() => {
+                                                startMatrix();
+                                                setTimeout(() => {
+                                                    stopMatrix();
+                                                    appearSeed();
+                                                }, showMs);
+                                            }, fadeMs);
+                                        }
+
+                                        function init() {
+                                            resizeCanvas();
+                                            setInterval(cycle, everyMs);
+                                        }
+
+                                        window.addEventListener('resize', () => {
+                                            const wasRunning = running;
+                                            if (wasRunning) stopMatrix();
+                                            resizeCanvas();
+                                            if (wasRunning) startMatrix();
+                                        });
+
+                                        if (document.readyState === 'loading') {
+                                            document.addEventListener('DOMContentLoaded', init);
+                                        } else {
+                                            init();
+                                        }
+                                    })();
+                    </script>
+                </section>
+
+                <section class="flex flex-col gap-16 scroll-mt-28" id="experience">
+                    <style>
+                        .reveal {
+                            opacity: 0;
+                            transform: translateX(0);
+                            will-change: transform, opacity;
+                            transition: opacity 600ms cubic-bezier(.2, .7, .2, 1), transform 600ms cubic-bezier(.2, .7, .2, 1);
+                        }
+
+                        .reveal[data-direction="left"] {
+                            transform: translateX(-32px);
+                        }
+
+                        .reveal[data-direction="right"] {
+                            transform: translateX(32px);
+                        }
+
+                        .reveal.in-view {
+                            opacity: 1;
+                            transform: translateX(0);
+                        }
+
+                        @keyframes certSlide {
+                            0% {
+                                transform: translateX(100%);
+                                opacity: 0;
+                            }
+
+                            5% {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+
+                            28% {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+
+                            33% {
+                                transform: translateX(-100%);
+                                opacity: 0;
+                            }
+
+                            100% {
+                                transform: translateX(-100%);
+                                opacity: 0;
+                            }
+                        }
+
+                        .animate-cert-1 {
+                            animation: certSlide 9s ease-in-out infinite;
+                        }
+
+                        .animate-cert-2 {
+                            animation: certSlide 9s ease-in-out infinite 3s;
+                            transform: translateX(100%);
+                            opacity: 0;
+                        }
+
+                        .animate-cert-3 {
+                            animation: certSlide 9s ease-in-out infinite 6s;
+                            transform: translateX(100%);
+                            opacity: 0;
+                        }
+                    </style>
+                    <div class="flex flex-col gap-8">
+                        <div>
+                            <h2 class="text-3xl font-bold mb-2">Work Experience</h2>
+                            <p class="text-gray-400">My professional journey and career highlights.</p>
+                        </div>
+
+                        <div
+                            class="relative pl-8 sm:pl-10 space-y-12 before:absolute before:inset-0 before:ml-3 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-border-dark before:to-transparent">
+                            <div class="relative group reveal" data-direction="right">
+                                <div
+                                    class="absolute -left-8 sm:-left-10 mt-1.5 size-6 rounded-full border border-border-dark bg-card-dark group-hover:border-primary group-hover:bg-primary/20 transition-all duration-300 shadow-[0_0_0_4px_#142210]">
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-4 sm:items-start justify-between mb-2">
+                                    <div>
+                                        <h3
+                                            class="text-xl font-bold text-white group-hover:text-primary transition-colors cursor-pointer">
+                                            Full-Stack Developer</h3>
+                                        <p class="text-gray-400 font-medium">Flask & React Projects</p>
+                                    </div>
+                                </div>
+                                <ul
+                                    class="list-disc list-inside text-gray-400 text-sm space-y-1 ml-1 marker:text-primary/50">
+                                    <li>Built scalable web applications using Flask, Node.js or PHP for backend and
+                                        React for frontend.</li>
+                                    <li>Designed authentication systems.</li>
+                                    <li>Optimized database queries and improved UI/UX for responsive design.</li>
+                                </ul>
+                            </div>
+
+                            <div class="relative group reveal" data-direction="left">
+                                <div
+                                    class="absolute -left-8 sm:-left-10 mt-1.5 size-6 rounded-full border border-border-dark bg-card-dark group-hover:border-primary group-hover:bg-primary/20 transition-all duration-300 shadow-[0_0_0_4px_#142210]">
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-4 sm:items-start justify-between mb-2">
+                                    <div>
+                                        <h3
+                                            class="text-xl font-bold text-white group-hover:text-primary transition-colors cursor-pointer">
+                                            C++ Developer</h3>
+                                        <p class="text-gray-400 font-medium">Console Applications</p>
+                                    </div>
+                                </div>
+                                <ul
+                                    class="list-disc list-inside text-gray-400 text-sm space-y-1 ml-1 marker:text-primary/50">
+                                    <li>Developed efficient console-based applications.</li>
+                                    <li>Applied object-oriented programming principles and optimized algorithms for
+                                        performance.</li>
+                                    <li>Created reusable libraries.</li>
+                                </ul>
+                            </div>
+
+                            <div class="relative group reveal" data-direction="right">
+                                <div
+                                    class="absolute -left-8 sm:-left-10 mt-1.5 size-6 rounded-full border border-border-dark bg-card-dark group-hover:border-primary group-hover:bg-primary/20 transition-all duration-300 shadow-[0_0_0_4px_#142210]">
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-4 sm:items-start justify-between mb-2">
+                                    <div>
+                                        <h3
+                                            class="text-xl font-bold text-white group-hover:text-primary transition-colors cursor-pointer">
+                                            Machine Learning & AI Developer</h3>
+                                        <p class="text-gray-400 font-medium">Computer Vision & Problem Solving</p>
+                                    </div>
+                                </div>
+                                <ul
+                                    class="list-disc list-inside text-gray-400 text-sm space-y-1 ml-1 marker:text-primary/50">
+                                    <li>Designed and trained ML models for image classification and object detection.
+                                    </li>
+                                    <li>Implemented computer vision solutions.</li>
+                                    <li>Developed AI-driven algorithms for real-world problem-solving and automation.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="relative group reveal" data-direction="left">
+                                <div
+                                    class="absolute -left-8 sm:-left-10 mt-1.5 size-6 rounded-full border border-border-dark bg-card-dark group-hover:border-primary group-hover:bg-primary/20 transition-all duration-300 shadow-[0_0_0_4px_#142210]">
+                                </div>
+                                <div class="flex flex-col sm:flex-row gap-4 sm:items-start justify-between mb-2">
+                                    <div>
+                                        <h3
+                                            class="text-xl font-bold text-white group-hover:text-primary transition-colors cursor-pointer">
+                                            Cross-Platform Apps Developer</h3>
+                                        <p class="text-gray-400 font-medium">Freelance / Various Projects</p>
+                                    </div>
+                                </div>
+                                <ul
+                                    class="list-disc list-inside text-gray-400 text-sm space-y-1 ml-1 marker:text-primary/50">
+                                    <li>Developed cross-platform mobile applications using React Native and Python
+                                        backends.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <script>
+                        (function () {
+                            const items = document.querySelectorAll('#experience .reveal');
+
+                            const observer = new IntersectionObserver((entries) => {
+                                entries.forEach((entry) => {
+                                    if (entry.isIntersecting) {
+                                        entry.target.classList.add('in-view');
+                                    } else {
+                                        entry.target.classList.remove('in-view');
+                                    }
+                                });
+                            }, {
+                                root: null,
+                                threshold: 0.005,
+                                rootMargin: '0px 0px -10% 0px'
+                            });
+
+                            items.forEach((el) => observer.observe(el));
+                        })();
+                    </script>
+                    <div class="relative w-full max-w-2xl mx-auto h-[300px] overflow-hidden">
+                        <img src="assets/cert1.jpg" alt="Certificate 1"
+                            class="absolute inset-0 w-full h-full object-contain animate-cert-1" />
+                        <img src="assets/cert2.jpg" alt="Certificate 2"
+                            class="absolute inset-0 w-full h-full object-contain animate-cert-2" />
+                        <img src="assets/cert3.jpg" alt="Certificate 3"
+                            class="absolute inset-0 w-full h-full object-contain animate-cert-3" />
+                    </div>
+
+                    <style>
+                        @keyframes certSlide {
+                            0% {
+                                transform: translateX(100%);
+                                opacity: 0;
+                            }
+
+                            5% {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+
+                            28% {
+                                transform: translateX(0);
+                                opacity: 1;
+                            }
+
+                            33% {
+                                transform: translateX(-100%);
+                                opacity: 0;
+                            }
+
+                            100% {
+                                transform: translateX(-100%);
+                                opacity: 0;
+                            }
+                        }
+
+                        .animate-cert-1 {
+                            animation: certSlide 9s ease-in-out infinite;
+                        }
+
+                        .animate-cert-2 {
+                            animation: certSlide 9s ease-in-out infinite 3s;
+                            transform: translateX(100%);
+                            opacity: 0;
+                        }
+
+                        .animate-cert-3 {
+                            animation: certSlide 9s ease-in-out infinite 6s;
+                            transform: translateX(100%);
+                            opacity: 0;
+                        }
+                    </style>
+                </section>
+
+                <section class="flex flex-col gap-8 scroll-mt-28" id="projects">
+                    <div class="flex items-end justify-between">
+                        <div>
+                            <h2 class="text-3xl font-bold mb-2">Featured Projects</h2>
+                            <p class="text-gray-400">Live from my GitHub repositories.</p>
+                        </div>
+                        <a class="hidden sm:flex items-center gap-1 text-primary hover:underline text-sm font-medium cursor-pointer"
+                            href="https://github.com/77AXEL" target="_blank">
+                            View all on GitHub
+                            <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                        </a>
+                    </div>
+
+                    <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="skeleton bg-card-dark border border-border-dark rounded-xl h-[380px]"></div>
+                        <div class="skeleton bg-card-dark border border-border-dark rounded-xl h-[380px]"></div>
+                        <div class="skeleton bg-card-dark border border-border-dark rounded-xl h-[380px]"></div>
+                    </div>
+
+                    <div id="error-message"
+                        class="hidden bg-red-900/20 border border-red-500/50 rounded-xl p-6 text-center">
+                        <span class="material-symbols-outlined text-red-500 text-4xl mb-2">error</span>
+                        <p class="text-red-400">Failed to load repositories. Please try again later.</p>
+                    </div>
+                </section>
+
+                <style>
+                    .skeleton {
+                        background: linear-gradient(90deg, #1a2c15 25%, #2c3928 50%, #1a2c15 75%);
+                        background-size: 200% 100%;
+                        animation: loading 1.5s ease-in-out infinite;
+                    }
+
+                    @keyframes loading {
+                        0% {
+                            background-position: 200% 0;
+                        }
+
+                        100% {
+                            background-position: -200% 0;
+                        }
+                    }
+                </style>
+
+                <script>
+                    async function fetchGitHubRepos() {
+                        const username = '77AXEL';
+                        const container = document.getElementById('projects-container');
+                        const errorMessage = document.getElementById('error-message');
+
+                        try {
+                            const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=6`);
+
+                            if (!response.ok) {
+                                throw new Error('Failed to fetch repositories');
+                            }
+
+                            const repos = await response.json();
+
+                            container.innerHTML = '';
+
+                            if (repos.length === 0) {
+                                container.innerHTML = '<p class="text-gray-400 col-span-full text-center py-8">No repositories found.</p>';
+                                return;
+                            }
+
+                            repos.forEach(repo => {
+                                if (repo.name != "77AXEL") {
+                                    const card = createRepoCard(repo);
+                                    container.appendChild(card);
+                                }
+                            });
+
+                        } catch (error) {
+                            console.error('Error fetching repos:', error);
+                            container.innerHTML = '';
+                            errorMessage.classList.remove('hidden');
+                        }
+                    }
+
+                    function createRepoCard(repo) {
+                        const card = document.createElement('div');
+                        card.className = 'group bg-card-dark border border-border-dark rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 flex flex-col';
+
+                        const languageColors = {
+                            'JavaScript': '#f7df1e',
+                            'TypeScript': '#3178c6',
+                            'Python': '#3776ab',
+                            'Java': '#007396',
+                            'C++': '#00599c',
+                            'C': '#555555',
+                            'Rust': '#ce422b',
+                            'Go': '#00add8',
+                            'Ruby': '#cc342d',
+                            'PHP': '#777bb4',
+                            'HTML': '#e34c26',
+                            'CSS': '#264de4'
+                        };
+
+                        const langColor = languageColors[repo.language] || '#46ec13';
+
+                        const gradients = [
+                            'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                            'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+                            'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+                            'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+                            'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+                            'linear-gradient(135deg, #30cfd0 0%, #330867 100%)'
+                        ];
+
+                        const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
+
+                        const description = repo.description
+                            ? (repo.description.length > 100 ? repo.description.substring(0, 100) + '...' : repo.description)
+                            : 'No description available.';
+
+                        card.innerHTML = `
+        <div class="aspect-video w-full bg-cover bg-center relative" style="background: ${randomGradient};">
+            <div class="absolute inset-0 bg-background-dark/20 group-hover:bg-transparent transition-all"></div>
         </div>
-      </div>
+        <div class="p-6 flex flex-col flex-1 gap-4">
+            <div class="flex justify-between items-start">
+                <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">${repo.name}</h3>
+                <div class="flex gap-2 text-gray-400">
+                    <a class="hover:text-white transition-colors" href="${repo.html_url}" target="_blank">
+                        <span class="material-symbols-outlined">code</span>
+                    </a>
+                    ${repo.homepage ? `
+                        <a class="hover:text-white transition-colors" href="${repo.homepage}" target="_blank">
+                            <span class="material-symbols-outlined">open_in_new</span>
+                        </a>
+                    ` : ''}
+                </div>
+            </div>
+            <p class="text-gray-400 text-sm leading-relaxed mb-auto">${description}</p>
+            ${repo.language ? `
+                <div class="flex flex-wrap gap-2 mt-2">
+                    <span class="px-3 py-1 text-xs font-medium rounded-full bg-background-dark text-primary border border-border-dark">${repo.language}</span>
+                </div>
+            ` : ''}
+            <div class="pt-4 border-t border-border-dark flex items-center gap-4 text-xs text-gray-500 font-mono">
+                <div class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">star</span> ${repo.stargazers_count}
+                </div>
+                <div class="flex items-center gap-1">
+                    <span class="material-symbols-outlined text-[14px]">call_split</span> ${repo.forks_count}
+                </div>
+            </div>
+        </div>
+    `;
+
+                        return card;
+                    }
+
+                    document.addEventListener('DOMContentLoaded', fetchGitHubRepos);
+                </script>
+
+                <section class="flex flex-col gap-8 scroll-mt-28" id="skills">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-2">Technical Skills</h2>
+                        <p class="text-gray-400">The tools and technologies I use to build.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-card-dark border border-border-dark rounded-xl p-6 flex flex-col gap-4">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                                    <span class="material-symbols-outlined">code</span>
+                                </div>
+                                <h3 class="text-lg font-bold">Languages</h3>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="bg-[#142210] border border-border-dark px-3 py-1.5 rounded-md text-sm text-gray-300">Python</span>
+                                <span
+                                    class="bg-[#142210] border border-border-dark px-3 py-1.5 rounded-md text-sm text-gray-300">JavaScript</span>
+                                <span
+                                    class="bg-[#142210] border border-border-dark px-3 py-1.5 rounded-md text-sm text-gray-300">TypeScript</span>
+                                <span
+                                    class="bg-[#142210] border border-border-dark px-3 py-1.5 rounded-md text-sm text-gray-300">C++</span>
+                                <span
+                                    class="bg-[#142210] border border-border-dark px-3 py-1.5 rounded-md text-sm text-gray-300">C</span>
+                                <span
+                                    class="bg-[#142210] border border-border-dark px-3 py-1.5 rounded-md text-sm text-gray-300">SQL</span>
+                                <span
+                                    class="bg-[#142210] border border-border-dark px-3 py-1.5 rounded-md text-sm text-gray-300">Cython</span>
+                                <span
+                                    class="bg-[#142210] border border-border-dark px-3 py-1.5 rounded-md text-sm text-gray-300">PHP</span>
+                            </div>
+                        </div>
+                        <div class="bg-card-dark border border-border-dark rounded-xl p-6 flex flex-col gap-4">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                                    <span class="material-symbols-outlined">layers</span>
+                                </div>
+                                <h3 class="text-lg font-bold">Frameworks</h3>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="bg-[#142210] border border-border-dark px-3 py-1.5 rounded-md text-sm text-gray-300">React</span>
+                                <span
+                                    class="bg-[#142210] border border-border-dark px-3 py-1.5 rounded-md text-sm text-gray-300">Node.js</span>
+                                <span
+                                    class="bg-[#142210] border border-border-dark px-3 py-1.5 rounded-md text-sm text-gray-300">Flask</span>
+                                <span
+                                    class="bg-[#142210] border border-border-dark px-3 py-1.5 rounded-md text-sm text-gray-300">Pytorch</span>
+                                <span
+                                    class="bg-[#142210] border border-border-dark px-3 py-1.5 rounded-md text-sm text-gray-300">React
+                                    Native</span>
+                                <span
+                                    class="bg-[#142210] border border-border-dark px-3 py-1.5 rounded-md text-sm text-gray-300">Qt</span>
+                            </div>
+                        </div>
+                        <div class="bg-card-dark border border-border-dark rounded-xl p-6 flex flex-col gap-4">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="p-2 bg-primary/10 rounded-lg text-primary">
+                                    <span class="material-symbols-outlined">build</span>
+                                </div>
+                                <h3 class="text-lg font-bold">Tools</h3>
+                            </div>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="bg-[#142210] border border-border-dark px-3 py-1.5 rounded-md text-sm text-gray-300">Git
+                                    &amp; GitHub</span>
+                                <span
+                                    class="bg-[#142210] border border-border-dark px-3 py-1.5 rounded-md text-sm text-gray-300">Docker</span>
+                                <span
+                                    class="bg-[#142210] border border-border-dark px-3 py-1.5 rounded-md text-sm text-gray-300">Figma</span>
+                                <span
+                                    class="bg-[#142210] border border-border-dark px-3 py-1.5 rounded-md text-sm text-gray-300">VS
+                                    Code</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <footer class="border-t border-border-dark pt-12 mt-12 w-full text-center md:text-left" id="contact">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                        <div>
+                            <h2 class="text-2xl font-bold text-white mb-2">Let's build something amazing</h2>
+                            <p class="text-gray-400 text-sm">Open for freelance and collaborative opportunities.</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <a class="w-10 h-10 rounded-full bg-card-dark border border-border-dark flex items-center justify-center text-gray-300 hover:text-primary hover:border-primary transition-all cursor-pointer"
+                                href="mailto:mohamedgharbi7744@gmail.com" target="_blank">
+                                <span class="material-symbols-outlined text-lg cursor-pointer">mail</span>
+                            </a>
+                            <a class="w-10 h-10 rounded-full bg-card-dark border border-border-dark flex items-center justify-center text-gray-300 hover:text-primary hover:border-primary transition-all cursor-pointer"
+                                href="https://github.com/77axel" target="_blank">
+                                <svg class="w-4 h-4 fill-current cursor-pointer" viewbox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
+                                    </path>
+                                </svg>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center text-xs text-gray-500 pb-8">
+                        © 2023 Gharbi Mohamed. All rights reserved. Designed with <span class="text-primary">♥</span>
+                        and Tailwind.
+                    </div>
+                </footer>
+            </div>
+        </main>
     </div>
-  </center>
-  <canvas id='starField'></canvas>
-  <audio src='audios/sound.mp3' id='sound' controls></audio>
 </body>
+
 </html>
