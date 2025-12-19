@@ -19,15 +19,15 @@ The programming languages I use most often:
   <tr>
     <td align="center">
       <img src="./assets/cert1.jpg" width="280"/><br>
-      <b>Machine Learning Certificate</b>
+      <b>Machine Learning</b>
     </td>
     <td align="center">
       <img src="./assets/cert2.jpg" width="280"/><br>
-      <b>Intro to GenAI Studio</b>
+      <b>Advanced C++</b>
     </td>
     <td align="center">
       <img src="./assets/cert3.jpg" width="280"/><br>
-      <b>Advanced C++ Certificate</b>
+      <b>Generative AI Studio</b>
     </td>
   </tr>
 </table>
