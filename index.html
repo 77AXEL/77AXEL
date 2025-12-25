@@ -848,7 +848,7 @@
                                 }
 
                                 repos.forEach(repo => {
-                                    if (repo.name not in ["77AXEL", "AFlow"]) {
+                                    if (!["77AXEL", "AFlow"].includes(repo.name)) {
                                         const card = createRepoCard(repo);
                                         container.appendChild(card);
                                     }
