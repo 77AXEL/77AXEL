@@ -30,6 +30,12 @@ The programming languages I use most often:
       <b>Generative AI Studio</b>
     </td>
   </tr>
+  <tr>
+    <td align="center">
+      <img src="./assets/cert4.jpg" width="280"/><br>
+      <b>Python</b>
+    </td>
+  </tr>
 </table>
 
 
