@@ -4,7 +4,7 @@
 
 ## 📜 A short description 
 
-I am a university student and software developer/engineer with experience in low-level programming (C, C++, Assembly), full-stack development, and cross-platform application building. I study deep learning and computer vision, while also exploring operating systems, networking, cybersecurity, and the Internet of Things (IoT). I enjoy experimenting with 3D graphics, game engines, and OpenGL, and I use GitHub to share my projects, skills, and knowledge.
+I am a software developer/engineer with experience in low-level programming (C, C++, Assembly), full-stack development, and cross-platform application building. I study deep learning and computer vision, while also exploring operating systems, networking, cybersecurity, and the Internet of Things (IoT). I enjoy experimenting with 3D graphics, game engines, and OpenGL, and I use GitHub to share my projects, skills, and knowledge.
 
 The programming languages and web technologies I use most often: 
 
@@ -51,6 +51,7 @@ The programming languages and web technologies I use most often:
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/77AXEL/77AXEL/output/pacman-contribution-graph.svg">
   <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/77AXEL/77AXEL/output/pacman-contribution-graph.svg">
 </picture>
+
 
 
 
